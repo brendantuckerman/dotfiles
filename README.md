@@ -1,5 +1,13 @@
 <p align="center"><img src="art/banner-2x.png"></p>
 
+## Before running
+
+Review the list of Brew, as this is currently configured for original author.
+
+Update the aliases as we go.
+
+Ensure that [IBM Plex Mono](https://github.com/IBM/plex?tab=readme-ov-file) is available on your system 
+
 ## Introduction
 
 This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free to explore, learn and copy parts for your own dotfiles. Enjoy!
@@ -49,9 +57,8 @@ After backing up your old Mac you may now follow these install instructions to s
     cd ~/.dotfiles && ./fresh.sh
     ```
 
-5. Start `Herd.app` and run its install process
-6. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
-7. Restart your computer to finalize the process
+5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+6. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
 
@@ -85,6 +92,10 @@ You can tweak the shell theme, the Oh My Zsh settings and much more. Go through 
 Enjoy your own Dotfiles!
 
 ## Thanks To...
+
+Massive thanks to [Dries](https://github.com/driesvints/) from whom I forked this project. 
+
+In turn, here are his thanks as part of an ongoing thanks-chain:
 
 I first got the idea for starting this project by visiting the [GitHub does dotfiles](https://dotfiles.github.io/) project. Both [Zach Holman](https://github.com/holman/dotfiles) and [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) were great sources of inspiration. [Sourabh Bajaj](https://twitter.com/sb2nov/)'s [Mac OS X Setup Guide](http://sourabhbajaj.com/mac-setup/) proved to be invaluable. Thanks to [@subnixr](https://github.com/subnixr) for [his awesome Zsh theme](https://github.com/subnixr/minimal)! Thanks to [Caneco](https://twitter.com/caneco) for the header in this readme. And lastly, I'd like to thank [Emma Fabre](https://twitter.com/anahkiasen) for [her excellent presentation on Homebrew](https://speakerdeck.com/anahkiasen/a-storm-homebrewin) which made me migrate a lot to a [`Brewfile`](./Brewfile) and [Mackup](https://github.com/lra/mackup).
 

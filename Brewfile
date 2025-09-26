@@ -6,7 +6,6 @@ tap 'stripe/stripe-cli'
 # Binaries
 brew 'awscli'
 brew 'bash' # Latest Bash version
-brew 'bat' # Used for spatie/visit
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
 brew 'gh'
@@ -36,7 +35,6 @@ brew 'yarn'
 cask '1password'
 brew '1password-cli'
 cask 'caffeine'
-cask 'discord'
 cask 'docker'
 cask 'figma'
 cask 'firefox'
@@ -52,14 +50,13 @@ cask 'reflex'
 cask 'screen-studio'
 cask 'slack'
 cask 'tableplus'
-cask 'telegram-desktop'
 cask 'the-unarchiver'
 cask 'tinkerwell'
 cask 'transmit'
 cask 'tunnelbear'
 cask 'tuple'
 cask 'visual-studio-code'
-cask 'zoom'
+
 
 # Quicklook
 cask 'qlmarkdown'
@@ -75,11 +72,11 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Mac App Store
-mas 'Byword', id: 420212497
-mas 'Giphy Capture', id: 668208984
-mas 'Keynote', id: 409183694
-mas 'MyWoosh', id: 1498889644
-mas 'Numbers', id: 409203825
-mas 'Speedtest', id: 1153157709
-mas 'Spring', id: 1508706541
-mas 'Things', id: 904280696
+# mas 'Byword', id: 420212497
+# mas 'Giphy Capture', id: 668208984
+# mas 'Keynote', id: 409183694
+# mas 'MyWoosh', id: 1498889644
+# mas 'Numbers', id: 409203825
+# mas 'Speedtest', id: 1153157709
+# mas 'Spring', id: 1508706541
+# mas 'Things', id: 904280696

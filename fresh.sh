@@ -27,6 +27,10 @@ fi
 rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+#Do the same with the p10k.zsh file
+rm -rf $HOME/.zshrc
+ln -sw $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
+
 # Update Homebrew recipes
 brew update
 
@@ -37,16 +41,19 @@ brew bundle --file ./Brewfile
 # Set default MySQL root password and auth type
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
-# Create a projects directories
-mkdir $HOME/Code
-mkdir $HOME/Herd
+# Create a projects location
+mkdir $HOME/Projects
 
 # Create Code subdirectories
-mkdir $HOME/Code/blade-ui-kit
-mkdir $HOME/Code/laravel
+# mkdir $HOME/Code/work
+# mkdir $HOME/Code/play
 
 # Clone Github repositories
 ./clone.sh
+
+# Install the newly cloned Awesome vim
+sh $HOME/.vim_runtime/install_awesome_vimrc.sh
+
 
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg
