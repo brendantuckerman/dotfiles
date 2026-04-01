@@ -1,5 +1,31 @@
-# Path to your dotfiles.
 export DOTFILES=$HOME/.dotfiles
+# Add this to your ~/.zshrc file
+
+# Welcome message
+echo "════════════════════════════════════════════════════════════"
+echo "  $(whoami)@$(hostname) | $(date '+%A, %B %d, %Y - %H:%M')"
+echo "════════════════════════════════════════════════════════════"
+echo "  💻 Shell: $SHELL | Zsh: $ZSH_VERSION"
+echo "  📂 PWD: $PWD"
+echo "  🌿 Git branch: $(git branch --show-current 2>/dev/null || echo 'not a repo')"
+echo "────────────────────────────────────────────────────────────"
+
+# Docker containers
+if command -v docker &> /dev/null; then
+    RUNNING=$(docker ps --format "table {{.Names}}\t{{.Status}}" 2>/dev/null | tail -n +2)
+    if [ -n "$RUNNING" ]; then
+        echo "  🐳 Docker containers running:"
+        echo "$RUNNING" | while read line; do
+            echo "     → $line"
+        done
+    else
+        echo "  🐳 Docker: No containers running"
+    fi
+else
+    echo "  🐳 Docker: Not installed"
+fi
+
+echo "════════════════════════════════════════════════════════════"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -14,11 +40,14 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Fastly 
+ eval "$(fastly --completion-script-zsh)"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,5 +140,65 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Shortcuts
+alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+alias reloadshell="omz reload"
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
+alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+alias compile="commit 'compile'"
+alias timestamp="date +%s"
+alias version="commit 'version'"
+
+# Symfony
+alias sc="docker compose --project-directory ~/Projects/foss-fi exec php bin/console"
+alias sy="docker compose --project-directory ~/Projects/foss-fi exec php"
+
+# Directories
+alias dotfiles="cd $DOTFILES"
+alias library="cd $HOME/Library"
+alias projects="cd $HOME/Projects"
+
+# PHP
+# alias cfresh="rm -rf vendor/ composer.lock && composer i"
+# alias composer="herd composer"
+# alias php="herd php"
+
+# JS
+alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+alias watch="npm run dev"
+
+# Docker
+alias docker-composer="docker-compose"
+
+# SQL Server
+# alias mssql="docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=LaravelWow1986! -p 1433:1433 mcr.microsoft.com/mssql/server:2017-latest"
+
+# Git
+alias gs="git status"
+alias gco="git checkout"
+alias gb="git branch --sort=-committerdate"
+alias gc="git checkout"
+alias gl="git log --oneline --decorate --color"
+alias amend="git add . && git commit --amend --no-edit"
+alias commit="git add . && git commit -m"
+alias diff="git diff"
+alias force="git push --force-with-lease"
+alias nuke="git clean -df && git reset --hard"
+alias pop="git stash pop"
+alias prune="git fetch --prune"
+alias pull="git pull"
+alias push="git push"
+alias resolve="git add . && git commit --no-edit"
+alias stash="git stash -u"
+alias unstage="git restore --staged ."
+alias wip="commit wip"
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+
+export PATH="$HOME/.local/bin:$PATH"

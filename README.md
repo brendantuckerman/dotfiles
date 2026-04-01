@@ -1,22 +1,16 @@
-<p align="center"><img src="art/banner-2x.png"></p>
+This is a fork from driesvint, so consider supporting them:
+
+> If you find this repo useful, [consider sponsoring me](https://github.com/sponsors/driesvints) (a little bit)! ❤️
 
 ## Before running
 
-Review the list of Brew, as this is currently configured for original author.
-
-Update the aliases as we go.
-
-Ensure that [IBM Plex Mono](https://github.com/IBM/plex?tab=readme-ov-file) is available on your system 
+Ensure that [IBM Plex Mono](https://github.com/IBM/plex?tab=readme-ov-file) is available on your system
 
 ## Introduction
 
-This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme. Feel free to explore, learn and copy parts for your own dotfiles. Enjoy!
+This repository serves as my way to help me setup and maintain my Mac. It takes the effort out of installing everything manually. Everything needed to install my preferred setup of macOS is detailed in this readme.
 
-📖 - [Read the blog post](https://driesvints.com/blog/getting-started-with-dotfiles)  
-📺 - [Watch the screencast on Laracasts](https://laracasts.com/series/guest-spotlight/episodes/1)  
 💡 - [Learn how to build your own dotfiles](https://github.com/driesvints/dotfiles#your-own-dotfiles)
-
-If you find this repo useful, [consider sponsoring me](https://github.com/sponsors/driesvints) (a little bit)! ❤️ 
 
 ## A Fresh macOS Setup
 
@@ -47,15 +41,15 @@ After backing up your old Mac you may now follow these install instructions to s
 
 3. Clone this repo to `~/.dotfiles` with:
 
-    ```zsh
-    git clone --recursive git@github.com:driesvints/dotfiles.git ~/.dotfiles
-    ```
+   ```zsh
+   git clone --recursive git@github.com:driesvints/dotfiles.git ~/.dotfiles
+   ```
 
 4. Run the installation with:
 
-    ```zsh
-    cd ~/.dotfiles && ./fresh.sh
-    ```
+   ```zsh
+   cd ~/.dotfiles && ./fresh.sh
+   ```
 
 5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
 6. Restart your computer to finalize the process
@@ -80,7 +74,7 @@ Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to inst
 
 Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If you need to tweak your `$PATH` check out the [`path.zsh`](./path.zsh) file. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking to tweak your Oh My Zsh setup. More info about how to customize Oh My Zsh can be found [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization).
 
-When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory. 
+When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory.
 
 ```zsh
 brew install mackup
@@ -93,7 +87,7 @@ Enjoy your own Dotfiles!
 
 ## Thanks To...
 
-Massive thanks to [Dries](https://github.com/driesvints/) from whom I forked this project. 
+Massive thanks to [Dries](https://github.com/driesvints/) from whom I forked this project.
 
 In turn, here are his thanks as part of an ongoing thanks-chain:
 

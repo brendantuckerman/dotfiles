@@ -28,7 +28,7 @@ rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
 #Do the same with the p10k.zsh file
-rm -rf $HOME/.zshrc
+rm -rf $HOME/.p10k.zsh
 ln -sw $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
 
 # Update Homebrew recipes
@@ -37,9 +37,6 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
 brew bundle --file ./Brewfile
-
-# Set default MySQL root password and auth type
-mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
 # Create a projects location
 mkdir $HOME/Projects
