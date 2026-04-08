@@ -1,3 +1,8 @@
+# My Dotfiles
+
+Feel freee to use--there is some fairly specific stuff in here, so you'll need
+to ammend (or see the original).
+
 This is a fork from driesvint, so consider supporting them:
 
 > If you find this repo useful, [consider sponsoring the original author](https://github.com/sponsors/driesvints) (a little bit)! ❤️
@@ -45,21 +50,26 @@ After backing up your old Mac you may now follow these install instructions to s
    git clone --recursive git@github.com:driesvints/dotfiles.git ~/.dotfiles
    ```
 
+3a. Add pCloud drive via https://www.pcloud.com/download-free-online-cloud-file-storage.
+Install and mount at `~/pCloud Drive`
+
 4. Run the installation with:
 
    ```zsh
    cd ~/.dotfiles && ./fresh.sh
    ```
 
-5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore` (only if you have sved a previous macs' settings)
 6. Restart your computer to finalize the process
 7. Add ff_bookmarks.html to Firefox
-8. PHPCS is available for any projects
-9. Import vscode_profile-code-profile
-10. Use the files in .vscode/ and xdebug/ for Drupal debug setup. Note that
-    there is a lando param in the /xdebug folder
+8. Import vscode_profile-code-profile into vscod using `ctrl + shift + p` `>import profile`
+9. Use the files in .vscode/ and xdebug/ for Drupal debug setup. Note that
+   there is a lando param in the /xdebug folder. You can also add phpcs.xml
+   to existing Drupal projects
 
 Your Mac is now ready to use!
+
+> Don't forget to check that aliases are being use--there are some great ones in there.
 
 > 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the references in the [`.zshrc`](./.zshrc#L2) and [`fresh.sh`](./fresh.sh#L20) files.
 
