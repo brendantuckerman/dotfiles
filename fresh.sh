@@ -58,5 +58,27 @@ ln -sw $HOME/.dotfiles/my_configs.vim $HOME/.vim_runtime/my_configs.vim
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
+# Add VS Code CLI to PATH if not already available
+if ! command -v code &>/dev/null; then
+  export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+fi
+
+# Install VS Code extensions
+code --install-extension antfu.iconify
+code --install-extension anthropic.claude-code
+code --install-extension bmewburn.vscode-intelephense-client
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension editorconfig.editorconfig
+code --install-extension esbenp.prettier-vscode
+code --install-extension hollowtree.vue-snippets
+code --install-extension mblode.twig-language-2
+code --install-extension ms-python.debugpy
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-python.vscode-python-envs
+code --install-extension ms-vscode.makefile-tools
+code --install-extension vue.volar
+code --install-extension xdebug.php-debug
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos

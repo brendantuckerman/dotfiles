@@ -54,6 +54,10 @@ After backing up your old Mac you may now follow these install instructions to s
 5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
 6. Restart your computer to finalize the process
 7. Add ff_bookmarks.html to Firefox
+8. PHPCS is available for any projects
+9. Import vscode_profile-code-profile
+10. Use the files in .vscode/ and xdebug/ for Drupal debug setup. Note that
+    there is a lando param in the /xdebug folder
 
 Your Mac is now ready to use!
 
