@@ -51,6 +51,9 @@ mkdir $HOME/Projects
 # Install the newly cloned Awesome vim
 sh $HOME/.vim_runtime/install_awesome_vimrc.sh
 
+# Symlink my personal vim preferences
+rm $HOME/.vim_runtime/my_configs.vim
+ln -sw $HOME/.dotfiles/my_configs.vim $HOME/.vim_runtime/my_configs.vim
 
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg

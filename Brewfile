@@ -13,13 +13,20 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'svn' # Needed to install fonts
+brew "drush"             
+brew "php"              
+brew "composer"          
+brew "php-cs-fixer"       # Code style fixer
+brew "phpstan"            # Static analysis
+
 
 # Development
 brew 'imagemagick'
 brew 'yarn'
+brew "phpcs"              # PHP CodeSniffer for Drupal standards
+
 
 # Apps
-
 cask 'caffeine'
 cask 'orbstack'
 cask 'figma'
@@ -35,7 +42,8 @@ cask 'tableplus' #db table gui https://tableplus.com/
 cask 'the-unarchiver' #https://theunarchiver.com/
 cask 'transmit' #Mac specific file transfer https://panic.com/transmit/
 cask 'visual-studio-code'
-
+cask 'chromedriver'      # Selenium testing
+cask 'visual-studio-code'
 
 # Quicklook
 cask 'qlmarkdown'
