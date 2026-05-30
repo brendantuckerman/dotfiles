@@ -1,7 +1,12 @@
 # My Dotfiles
 
+##TODO: This wil fail silently, so adding in some feedback would be helpful.
+
+
 Feel freee to use--there is some fairly specific stuff in here, so you'll need
 to ammend (or see the original).
+
+
 
 This is a fork from driesvint, so consider supporting them:
 
@@ -29,7 +34,7 @@ If you're migrating from an existing Mac, you should first make sure to backup a
 - Did you remember to save all important documents from non-iCloud directories?
 - Did you save all of your work from apps which aren't synced through iCloud?
 - Did you remember to export important data from your local database?
-- Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
+
 
 ### Setting up your Mac
 
@@ -59,7 +64,6 @@ Install and mount at `~/pCloud Drive`
    cd ~/.dotfiles && ./fresh.sh
    ```
 
-5. After mackup is synced with your cloud storage, restore preferences by running `mackup restore` (only if you have sved a previous macs' settings)
 6. Restart your computer to finalize the process
 7. Add ff_bookmarks.html to Firefox
 8. Import vscode_profile-code-profile into vscod using `ctrl + shift + p` `>import profile`
@@ -89,12 +93,6 @@ Check out the [`Brewfile`](./Brewfile) file and adjust the apps you want to inst
 
 Check out the [`aliases.zsh`](./aliases.zsh) file and add your own aliases. If you need to tweak your `$PATH` check out the [`path.zsh`](./path.zsh) file. These files get loaded in because the `$ZSH_CUSTOM` setting points to the `.dotfiles` directory. You can adjust the [`.zshrc`](./.zshrc) file to your liking to tweak your Oh My Zsh setup. More info about how to customize Oh My Zsh can be found [here](https://github.com/robbyrussell/oh-my-zsh/wiki/Customization).
 
-When installing these dotfiles for the first time you'll need to backup all of your settings with Mackup. Install Mackup and backup your settings with the commands below. Your settings will be synced to iCloud so you can use them to sync between computers and reinstall them when reinstalling your Mac. If you want to save your settings to a different directory or different storage than iCloud, [checkout the documentation](https://github.com/lra/mackup/blob/master/doc/README.md#storage). Also make sure your `.zshrc` file is symlinked from your dotfiles repo to your home directory.
-
-```zsh
-brew install mackup
-mackup backup
-```
 
 You can tweak the shell theme, the Oh My Zsh settings and much more. Go through the files in this repo and tweak everything to your liking.
 
